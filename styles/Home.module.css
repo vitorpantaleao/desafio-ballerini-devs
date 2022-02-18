@@ -1,6 +1,8 @@
 .container {
   padding: 0;
   background-color: #1D1D1D;
+  position: relative;
+  z-index: 9999;
 }
 
 .main {
@@ -28,6 +30,7 @@
 .logoName {
   color: #FFF;
   padding-left: 10px;
+  font-size: 28px;
 }
 
 .icons {
@@ -115,6 +118,7 @@
 .blobs {
   position: fixed;
   inset: 0;
+  z-index: -1;
 }
 
 .blobCima {
