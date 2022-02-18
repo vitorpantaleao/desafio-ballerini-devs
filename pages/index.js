@@ -3,6 +3,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Menu from '../src/components/Menu/Menu'
 import programador from '../src/assets/images/programador-main.png'
+import blobCima from '../src/assets/images/blobs-cima.png'
+import blobBaixo from '../src/assets/images/blobs-baixo.png'
 
 export default function Home() {
   return (
@@ -22,6 +24,14 @@ export default function Home() {
             </div>
             <div className={styles.colImage}>
               <Image src={programador}  />
+            </div>
+          </div>
+          <div className={styles.blobs}>
+            <div className={styles.blobCima}>
+              <Image src={blobCima} />
+            </div>
+            <div className={styles.blobBaixo}>
+              <Image src={blobBaixo} />
             </div>
           </div>
       </main>

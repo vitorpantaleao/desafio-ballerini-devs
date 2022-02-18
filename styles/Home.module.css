@@ -72,6 +72,21 @@
   width: 100%;
 }
 
+.blobs {
+  position: fixed;
+  inset: 0;
+}
+
+.blobCima {
+  position: fixed;
+  top: 12%;
+}
+
+.blobBaixo {
+  position: fixed;
+  bottom: -5px;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
