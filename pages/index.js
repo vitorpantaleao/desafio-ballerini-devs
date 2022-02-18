@@ -21,6 +21,7 @@ export default function Home() {
             <div className={styles.col}>
               <h1>O maior banco de devs do Brasil</h1>
               <p>Nao importa se front ou back end, fazer networking e muito importante. Faça parte da maior comunidade de desenvolvedores brasileiros.</p>
+              <a href="#" className={styles.signIn}>Entre Agora</a>
             </div>
             <div className={styles.colImage}>
               <Image src={programador}  />

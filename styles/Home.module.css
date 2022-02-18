@@ -66,6 +66,46 @@
 .col p {
   font-size: 18px;
   color: #A9A9A9;
+  margin: -10px 0 0;
+}
+
+.signIn {
+  background-color: #27AE60;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  width: 240px;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 20px;
+  margin: 50px 0 0;
+  position: relative;
+  cursor: pointer;
+  z-index: 999;
+  transition: .5s;
+}
+
+.signIn::before {
+  content: '';
+  width: 100px;
+  height: 3px;
+  background-color: #27AE60;
+  display: block;
+  position: absolute;
+  bottom: -15px;
+  transition: .5s;
+}
+
+.signIn:hover {
+  opacity: .7;
+  transition: .5s;
+}
+
+.signIn:hover::before {
+  width: 150px;
+  transition: .5s;
 }
 
 .colImage {
