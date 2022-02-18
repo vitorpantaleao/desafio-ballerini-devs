@@ -9,9 +9,15 @@ export default function Menu() {
     return(
         <nav className={styles.navbar}>
             <div className={styles.icons}>
-                <Image className="icon" src={linkedin} alt="Discord" width={25} height={25} />
-                <Image className="icon" src={facebook} alt="Discord" width={25} height={25} />
-                <Image className="icon" src={discord} alt="Discord" width={25} height={25} />
+                <a href="#">
+                    <Image className="icon" src={linkedin} alt="Discord" width={28} height={28} />
+                </a>
+                <a href="#">
+                    <Image className="icon" src={facebook} alt="Discord" width={28} height={28} />
+                </a>
+                <a href="#">
+                    <Image className="icon" src={discord} alt="Discord" width={28} height={28} />
+                </a>
             </div>
             <div className={styles.logo}>
                 <a href="/">

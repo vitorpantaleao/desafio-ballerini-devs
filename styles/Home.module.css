@@ -38,8 +38,16 @@
   align-items: center;
 }
 
-.icon {
-  padding-right: 10px;
+.icons a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.icons a:hover {
+  background-color: #FFF;
+  border-radius: 50%;
 }
 
 @media (max-width: 600px) {
