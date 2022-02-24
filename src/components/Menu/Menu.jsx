@@ -25,7 +25,12 @@ export default function Menu() {
                     <h2 className={styles.logoName}>Ballerini Devs</h2>
                 </a>
             </div>
-            <div className="search"></div>
+            <div className={styles.searchDevs}>
+                <form>
+                    <input className={styles.search} type="text" placeholder="Buscar" />
+                </form>
+                <button className={styles.addDev}>Adicionar Desenvolvedor</button>
+            </div>
         </nav>
     )
 }styles
