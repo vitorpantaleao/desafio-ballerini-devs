@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from 'react'
 import Image from "next/image";
 import styles from '../../../styles/Home.module.css'
 import linkedin from '../../assets/icons/linkedin.png'
 import facebook from '../../assets/icons/facebook.png'
 import discord from '../../assets/icons/discord.png'
 
+import Modal from '../Modal/Modal';
+
 export default function Menu() {
+    const [isModalVisible, setIsModalVisible] = useState(false)
     return(
         <nav className={styles.navbar}>
             <div className={styles.icons}>
@@ -29,7 +32,16 @@ export default function Menu() {
                 <form>
                     <input className={styles.search} type="text" placeholder="Buscar" />
                 </form>
-                <button className={styles.addDev}>Adicionar Desenvolvedor</button>
+                <button 
+                    className={styles.addDev}
+                    onClick={() => setIsModalVisible(true) }
+                >
+                    Adicionar Desenvolvedor
+                </button>
+                { isModalVisible ? 
+                    <Modal onClose={ () => setIsModalVisible(false) } /> 
+                    : null 
+                }
             </div>
         </nav>
     )

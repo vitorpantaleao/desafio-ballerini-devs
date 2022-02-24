@@ -1,7 +1,8 @@
+import React from 'react'
 import Head from 'next/head'
 import Menu from '../src/components/Menu/Menu'
 import styles from '../styles/Home.module.css'
-import styleDev from '../styles/Home.module.css'
+// import styleDev from '../styles/Home.module.css'
 
 export default function Devs() {
     return(
