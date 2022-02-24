@@ -8,7 +8,8 @@ import discord from '../../assets/icons/discord.png'
 import Modal from '../Modal/Modal';
 
 export default function Menu() {
-    const [isModalVisible, setIsModalVisible] = useState(false)
+    const [isModalVisible, setIsModalVisible]   = useState(false)
+    const [isButtonVisible, setIsButtonVisible] = useState(true)
     return(
         <nav className={styles.navbar}>
             <div className={styles.icons}>
@@ -29,19 +30,21 @@ export default function Menu() {
                 </a>
             </div>
             <div className={styles.searchDevs}>
-                <form>
-                    <input className={styles.search} type="text" placeholder="Buscar" />
-                </form>
-                <button 
-                    className={styles.addDev}
-                    onClick={() => setIsModalVisible(true) }
-                >
-                    Adicionar Desenvolvedor
-                </button>
-                { isModalVisible ? 
-                    <Modal onClose={ () => setIsModalVisible(false) } /> 
-                    : null 
-                }
+                { isButtonVisible ? 
+                    <>
+                        <form>
+                            <input className={styles.search} type="text" placeholder="Buscar" />
+                        </form>
+                        <button 
+                            className={styles.addDev}
+                            onClick={() => setIsModalVisible(true) }
+                        >
+                            Adicionar Desenvolvedor
+                        </button>
+                    </>
+                : null }
+                
+                { isModalVisible ? <Modal onClose={ () => setIsModalVisible(false) } /> : null }
             </div>
         </nav>
     )
