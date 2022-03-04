@@ -1,3 +1,5 @@
+import React from 'react'
+import { AuthContext } from '../src/components/contexts/Auth'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -8,6 +10,8 @@ import blobCima from '../src/assets/images/blobs-cima.png'
 import blobBaixo from '../src/assets/images/blobs-baixo.png'
 
 export default function Home() {
+  const {isLogged, setIsLogged} = React.useContext(AuthContext)
+
   return (
     <div className={styles.container}>
       <Head>
@@ -22,7 +26,9 @@ export default function Home() {
             <div className={styles.col}>
               <h1>O maior banco de devs do Brasil</h1>
               <p>Nao importa se front ou back end, fazer networking e muito importante. Faça parte da maior comunidade de desenvolvedores brasileiros.</p>
-              <Link href="/devs" className={styles.signIn}>Entre Agora</Link>
+              <Link href="/devs" className={styles.signIn}>
+                <a onClick={ () => { setIsLogged(true) }}>Entre Agora</a>
+              </Link>
             </div>
             <div className={styles.colImage}>
               <Image src={programador}  />

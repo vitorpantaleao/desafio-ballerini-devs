@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { AuthContext } from '../contexts/Auth';
 import Image from "next/image";
 import styles from '../../../styles/Home.module.css'
 import linkedin from '../../assets/icons/linkedin.png'
@@ -9,7 +10,8 @@ import Modal from '../Modal/Modal';
 
 export default function Menu() {
     const [isModalVisible, setIsModalVisible]   = useState(false)
-    const [isButtonVisible, setIsButtonVisible] = useState(true)
+    const {isLogged, setIsLogged} = React.useContext(AuthContext)
+    console.log('menu', isLogged)
     return(
         <nav className={styles.navbar}>
             <div className={styles.icons}>
@@ -30,7 +32,7 @@ export default function Menu() {
                 </a>
             </div>
             <div className={styles.searchDevs}>
-                { isButtonVisible ? 
+                { isLogged ? 
                     <>
                         <form>
                             <input className={styles.search} type="text" placeholder="Buscar" />
