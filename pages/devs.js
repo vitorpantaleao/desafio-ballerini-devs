@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Menu from '../src/components/Menu/Menu'
 import styles from '../styles/Home.module.css'
-// import styleDev from '../styles/Home.module.css'
+import Users from '../src/components/Users/Users'
 
 export default function Devs() {
     return(
@@ -15,6 +15,7 @@ export default function Devs() {
 
             <main className={styles.main}>
                 <Menu />
+                <Users />
             </main>
 
         </div>
