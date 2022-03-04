@@ -6,7 +6,9 @@ export default function Users() {
     <>
         <div className={styles.users}>
             <div className={styles.user}>
-                <h1>Usuario</h1>    
+                <div className={styles.imgUser}>
+                    <img src="https://github.com/vitorpantaleao.png" alt="usuario Github" />
+                </div>  
             </div>
         </div>
     </>

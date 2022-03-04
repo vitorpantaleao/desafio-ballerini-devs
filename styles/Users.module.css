@@ -13,3 +13,15 @@
     padding: 20px;
     box-sizing: border-box;
 }
+
+.imgUser {
+    width: 175px;
+    height: 175px;
+    margin: 10px auto;
+}
+
+.imgUser img {
+    width: 100%;
+    border-radius: 50%;
+    object-fit: contain;
+}
